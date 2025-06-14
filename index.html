@@ -163,10 +163,12 @@
       We're engineering the future of legal access—powered by machine learning, built for real-world justice. Our AI-driven platform intelligently matches clients with the right attorneys using data, context, and intent. Join thousands already on the waitlist for our launch in Fall 2025.
     </p>
 
-    <form id="waitlist-form" class="buttons" onsubmit="return fakeSubmit(event)">
-      <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
+    <form action="https://formspree.io/f/mzzggzjw" method="POST" class="buttons">
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="email" name="email" placeholder="Enter your email address" required />
       <button type="submit">Join Waitlist</button>
     </form>
+
 
     <section class="mission">
       <h2>Our Mission</h2>
