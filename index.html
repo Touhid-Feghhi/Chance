@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chance – Breakthrough in Legal Justice</title>
 
-  <!-- Google Fonts: Montserrat -->
+  <!-- Google Fonts: Montserrat Regular (400) -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -18,6 +18,7 @@
     body {
       background-color: #ecf3f7;
       font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
       color: #1a1a1a;
       min-height: 100vh;
     }
@@ -47,10 +48,11 @@
     }
 
     .left h1 {
-      font-size: 3.2rem;
-      line-height: 1.2;
+      font-size: 2.8rem;
+      line-height: 1.25;
       margin: 20px 0 40px;
-      font-weight: 700;
+      font-weight: 400; /* Regular */
+      font-family: 'Montserrat', sans-serif;
     }
 
     h1 .line-one {
@@ -67,10 +69,12 @@
     }
 
     .subheading {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
+      line-height: 1.6;
       color: #000;
       max-width: 1000px;
       margin: -10px 0 30px;
+      font-weight: 400;
     }
 
     .buttons {
@@ -129,9 +133,10 @@
     }
 
     .mission p {
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #1a1a1a;
-      line-height: 1.6;
+      line-height: 1.75;
+      font-weight: 400;
     }
 
     @media (max-width: 600px) {
@@ -200,6 +205,7 @@
     thanksMessage.style.fontWeight = "600";
     thanksMessage.style.color = "#6a0dad";
     thanksMessage.style.marginTop = "20px";
+    thanksMessage.style.fontFamily = "'Montserrat', sans-serif";
 
     form.parentNode.insertBefore(thanksMessage, form.nextSibling);
 
