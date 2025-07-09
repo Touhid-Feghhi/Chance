@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chance – Breakthrough in Legal Justice</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -13,7 +17,7 @@
 
     body {
       background-color: #ecf3f7;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', sans-serif;
       color: #1a1a1a;
       min-height: 100vh;
     }
@@ -43,6 +47,7 @@
     }
 
     .left h1 {
+      font-family: 'Playfair Display', serif;
       font-size: 3.2rem;
       line-height: 1.2;
       margin: 20px 0 40px;
@@ -88,6 +93,7 @@
       border: 2px solid #ccc;
       outline: none;
       transition: border-color 0.3s ease;
+      font-family: 'Inter', sans-serif;
     }
 
     .buttons input[type="email"]:focus {
@@ -104,6 +110,7 @@
       cursor: pointer;
       color: white;
       transition: background 0.3s ease;
+      font-family: 'Inter', sans-serif;
     }
 
     .buttons button:hover {
@@ -121,6 +128,7 @@
       font-size: 1.2rem;
       color: #6a0dad;
       margin-bottom: 16px;
+      font-weight: 600;
     }
 
     .mission p {
@@ -160,24 +168,14 @@
       <span class="line-two">Legal Justice</span>
     </h1>
     <p class="subheading">
-      We're engineering the future of legal access—powered by machine learning, built for real-world justice. Our AI-driven platform intelligently matches clients with the right attorneys using data, context, and intent. Join thousands already on the waitlist for our launch in Fall 2025.
+      We're engineering the future of legal access—powered by machine learning, built for real-world justice. Join thousands already on the waitlist for our launch in Fall 2025.
     </p>
 
-    <form action="https://formspree.io/f/mzzggzjw" method="POST" class="buttons">
+    <form action="https://formspree.io/f/mzzggzjw" method="POST" class="buttons" onsubmit="return fakeSubmit(event)">
       <input type="text" name="_gotcha" style="display:none">
       <input type="email" name="email" placeholder="Enter your email address" required />
       <button type="submit">Join Waitlist</button>
     </form>
-
-
-    <section class="mission">
-      <h2>Our Mission</h2>
-      <p>
-        We're creating a revolutionary platform that addresses economic mobility by preventing financial devastation from legal issues, helping people protect and recover assets, and enabling small businesses to access legal support for growth. Through innovative AI technology, we're making quality legal representation accessible to underserved communities.
-      </p>
-    </section>
-  </div>
-</div>
 
 <script>
   function fakeSubmit(event) {
@@ -198,6 +196,7 @@
     thanksMessage.style.fontWeight = "600";
     thanksMessage.style.color = "#6a0dad";
     thanksMessage.style.marginTop = "20px";
+    thanksMessage.style.fontFamily = "'Inter', sans-serif";
 
     form.parentNode.insertBefore(thanksMessage, form.nextSibling);
 
