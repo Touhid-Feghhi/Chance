@@ -189,7 +189,7 @@
     <img src="chance.jpg" alt="Chance Logo" class="logo" />
     <h1>
       <span class="line-one">The Breakthrough in</span>
-      <span class="line-two">Legal JusticeX</span>
+      <span class="line-two">Legal JusticeLLL</span>
     </h1>
     <p class="subheading">
       We're engineering the future of legal access—powered by machine learning, built for real-world justice. Join thousands already on the waitlist for our launch in Fall 2025.
@@ -243,15 +243,19 @@ document.getElementById('emailForm').addEventListener('submit', async function(e
   submitBtn.textContent = 'Joining...';
   
   try {
-    // Use FormData approach for better compatibility
-    const formData = new FormData();
-    formData.append('email', email);
-    formData.append('timestamp', new Date().toISOString());
-    formData.append('source', 'landing_page');
+    // Your Google Apps Script deployment URL
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwgFPFUiV6H7d9tfduEpT3aIWVpMGOo9gKgghsEb_LgrzR9XMaYicpMFcaqqiYKOHYRbg/exec';
     
-    const response = await fetch('https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLheJdO-HcU_JGbm1aI_dPkdx5bsEzNu3S4c_Mbo2IB5h9aQw5SKJZHwcgaezONIjNIcFuDAZtIE2Fh2nbZNmFx3Qwm2c-2xc_YDcebXIpWDbzXgBQrvVl8DuOiMf4OIFfxK0jL4i5WocnllZlsVct7jvJpgDPff1gft0z8iiIquBPCQnTtF1Vl9C18T1LspUURt8iPfr-_xub2JtiZlWbNpssSPEOxAUbDuRIoRbdqpLfqjA-Sn4EL1tgIUlx2iG8zKq6ihhTBGZb4gHwVj3BnCrhqEHiHLHXlLU0SD&lib=Mt0j25gzSvnSXbEHQlWw7VfvWf6x4BlVA', {
+    const response = await fetch(SCRIPT_URL, {
       method: 'POST',
-      body: formData
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: email,
+        timestamp: new Date().toISOString(),
+        source: 'landing_page'
+      })
     });
     
     if (response.ok) {
