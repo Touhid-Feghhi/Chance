@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chance – Breakthrough in Legal Justice</title>
 
+<!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-QDDT9QF0E8"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'G-QDDT9QF0E8');
+ </script>
+  
   <!-- Google Fonts: Montserrat Regular (400) -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -257,7 +267,12 @@ document.getElementById('emailForm').addEventListener('submit', async function(e
       if (result.success) {
         successMsg.style.display = 'block';
         document.getElementById('emailInput').value = '';
-        
+          // Track sign-up in Google Analytics
+        if (typeof gtag === 'function') {
+          gtag('event', 'sign_up', {
+            'method': 'landing_page'
+          });
+        }
         // Hide success message after 3 seconds
         setTimeout(() => {
           successMsg.style.display = 'none';
